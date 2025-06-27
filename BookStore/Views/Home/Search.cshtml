@@ -1,0 +1,29 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "جست و جو";
+}
+<html lang="fa" dir="rtl">
+<link rel="stylesheet" href="/css/home.css">
+
+
+<h2>نتایج جستجو</h2>
+
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <img src="~/Image/@(item.Id).jpg" class="card-image-top img-thumbnial" />
+                <h6 class="card-title">@item.Name</h6>
+                <a asp-action="Detail"
+                   asp-controller="Home"
+                   asp-route-id="@item.Id">جزییات محصول</a>
+            </div>
+        }
+    </ul>
+}
+else
+{
+    <p>نتیجه‌ای یافت نشد.</p>
+}

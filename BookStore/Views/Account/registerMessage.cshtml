@@ -1,0 +1,23 @@
+﻿@model UserViewModel
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ثبت نام موفق</title>
+    <link rel="stylesheet" href="~/css/RegisterSeccessful.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>کتابچی</h1>
+    </header>
+
+    <main>
+        <div class="alert-success">
+            <h2>@Model.Name ثبت نام با موفقیت انجام شد</h2>
+        </div>
+        <a class="button" asp-controller="Account" asp-action="Login">ورود</a>
+    </main>
+
+</body>
+</html>

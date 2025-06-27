@@ -1,0 +1,80 @@
+﻿:root {
+    --ketabchi-brown-dark: #6d4c41;
+    --ketabchi-brown-medium: #a1887f;
+    --ketabchi-olive-green: #808000;
+    --ketabchi-olive-green-darker: #556b2f;
+    --ketabchi-dark-red: #B22222;
+    --ketabchi-cream: #FFF8DC;
+    --ketabchi-beige: #EFE5D0;
+    --ketabchi-light-text: #f8f9fa;
+    --ketabchi-dark-text: #333333;
+    --ketabchi-font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+body {
+    background-color: var(--ketabchi-cream);
+    font-family: var(--ketabchi-font-family);
+    direction: rtl;
+    text-align: right;
+    color: var(--ketabchi-dark-text);
+}
+
+h1 {
+    color: var(--ketabchi-brown-dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    background-color: var(--ketabchi-beige);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(109, 76, 65, 0.2); 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.control-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    border: 1px solid var(--ketabchi-brown-medium);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: var(--ketabchi-dark-text);
+}
+
+    .form-control:focus {
+        border-color: var(--ketabchi-olive-green);
+        box-shadow: 0 0 5px rgba(85, 107, 47, 0.4); 
+        outline: none;
+    }
+
+.text-danger {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    color: var(--ketabchi-dark-red);
+}
+
+.btn-success {
+    background-color: var(--ketabchi-olive-green);
+    color: var(--ketabchi-light-text);
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+    .btn-success:hover {
+        background-color: var(--ketabchi-olive-green-darker);
+    }

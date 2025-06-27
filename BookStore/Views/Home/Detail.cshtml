@@ -1,0 +1,38 @@
+﻿@model DetailViewModel
+@{
+    ViewData["Title"] = "Detail" + Model.product.Id;
+}
+<html lang="fa" dir="rtl">
+<link rel="stylesheet" href="/css/Detail.css">
+
+
+<div class="container my-5">
+    <div class="row align-items-start product-details">
+        <div class="col-md-5">
+            <div class="image-box border rounded p-3 text-center bg-white">
+                <img src="~/Image/@(Model.product.Id).jpg"
+                     alt="@Model.product.Name"
+                     class="img-fluid img-thumbnail" />
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="info-box bg-white border rounded p-4">
+                <h2 class="card-title">@Model.product.Name</h2>
+                <p></p>
+                <p class="card-text">@Model.product.Description</p>
+                <p class="card-text fw-bold text-danger">@Model.product.item.Price.ToString("N0") تومان</p>
+
+                <div>
+                    <a class="btn btn-success"
+                       asp-action="AddToCart"
+                       asp-route-itemid="@Model.product.Id"
+                       asp-controller="Home"
+                       asp-action="AddToCart">
+                        افزودن به سبد خرید
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

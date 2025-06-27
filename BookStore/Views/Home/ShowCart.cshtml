@@ -1,0 +1,46 @@
+﻿@model IEnumerable<dynamic>  
+@{
+    ViewData["Title"] = "سبد خرید";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/ShowCart.css" />
+
+<div class="cart-container">
+    <div class="cart-title">سبد خرید شما</div>
+
+    @if (!Model.Any())
+    {
+        <p>سبد خرید شما خالی است.</p>
+    }
+    else
+    {
+        decimal total = 0;
+
+        foreach (var item in Model)
+        {
+            var imagePath = Url.Content($"~/Image/{item.ProductId}.jpg");
+            total += item.TotalPrice;
+
+            <div class="cart-item">
+                <img src="@imagePath" alt="@item.Name" />
+
+                <div class="item-details">
+                    <div class="item-title">@item.Name</div>
+                    <div class="item-price">قیمت واحد: @item.Price.ToString("N0") تومان</div>
+                    <div class="item-quantity">تعداد: @item.Quantity</div>
+                </div>
+
+                <form method="post" asp-action="Delete" asp-route-id="@item.DetailId">
+                    <button type="submit" class="remove-button">حذف</button>
+                </form>
+            </div>
+        }
+
+        <div class="cart-summary">
+            <strong>مجموع کل:</strong> @total.ToString("N0") تومان
+        </div>
+
+        <button class="checkout-button">تسویه حساب</button>
+    }
+</div>

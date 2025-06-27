@@ -1,0 +1,108 @@
+﻿:root {
+    --ketabchi-brown-dark: #6d4c41;
+    --ketabchi-brown-medium: #a1887f;
+    --ketabchi-olive-green: #808000;
+    --ketabchi-olive-green-darker: #556b2f;
+    --ketabchi-dark-red: #B22222;
+    --ketabchi-cream: #FFF8DC;
+    --ketabchi-beige: #EFE5D0;
+    --ketabchi-light-text: #f8f9fa;
+    --ketabchi-dark-text: #333333;
+    --ketabchi-font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+body.about-page {
+    font-family: var(--ketabchi-font-family);
+    background-color: var(--ketabchi-beige);
+    color: var(--ketabchi-dark-text);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
+
+
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: var(--ketabchi-cream);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 8px solid var(--ketabchi-brown-dark);
+}
+
+.about-header h1 {
+    color: var(--ketabchi-brown-dark);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--ketabchi-olive-green);
+    padding-bottom: 10px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+    .about-section h2 {
+        color: var(--ketabchi-olive-green-darker);
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        border-right: 4px solid var(--ketabchi-dark-red);
+        padding-right: 10px;
+    }
+
+    .about-section h3 {
+        color: var(--ketabchi-brown-medium);
+        font-size: 1.4rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+        text-align: justify;
+        color: #444;
+    }
+
+.highlight {
+    color: var(--ketabchi-dark-red);
+    font-weight: bold;
+}
+
+
+.quote {
+    border-right: 5px solid var(--ketabchi-olive-green);
+    padding: 15px 20px;
+    margin: 25px 0;
+    background-color: #fdfdfd;
+    font-style: italic;
+    color: var(--ketabchi-olive-green-darker);
+}
+
+
+.btn-custom {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--ketabchi-dark-red);
+    color: var(--ketabchi-light-text);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+    .btn-custom:hover {
+        background-color: #a52a2a;
+        color: white;
+    }
+
+
+hr.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), var(--ketabchi-brown-medium), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}

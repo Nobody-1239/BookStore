@@ -1,0 +1,126 @@
+﻿:root {
+    --ketabchi-brown-dark: #6d4c41;
+    --ketabchi-brown-medium: #a1887f;
+    --ketabchi-olive-green: #6B8E23;
+    --ketabchi-olive-green-darker: #556b2f;
+    --ketabchi-dark-red: #B22222;
+    --ketabchi-background-solid: #EFE5D0;
+    --ketabchi-cream: #FFF8DC;
+    --ketabchi-light-text: #f8f9fa;
+    --ketabchi-dark-text: #333333;
+    --ketabchi-font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+
+body {
+    font-family: var(--ketabchi-font-family);
+    background-color: var(--ketabchi-background-solid);
+    color: var(--ketabchi-dark-text);
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center; /* وسط‌چین کردن آیتم‌ها */
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* آیتم‌های منو به‌جای ستونی، کنار هم باشند */
+    gap: 20px; /* فاصله بین آیتم‌ها */
+}
+
+    .navbar-nav .nav-item {
+        display: inline-block;
+    }
+
+    .navbar-nav .nav-link {
+        color: var(--ketabchi-light-text) !important; /* سفید کردن متن */
+        font-size: 1rem;
+        padding: 8px 15px;
+        transition: color 0.3s ease;
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--ketabchi-cream);
+        }
+
+.navbar-toggler {
+    border: 1px solid var(--ketabchi-light-text);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--ketabchi-light-text);
+}
+
+
+.search-container {
+    background-color: var(--ketabchi-cream);
+    border: 2px solid var(--ketabchi-brown-medium);
+    border-radius: 8px;
+    padding: 10px;
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--ketabchi-dark-text);
+    background-color: var(--ketabchi-background-solid);
+    outline: none;
+}
+
+    .search-input::placeholder {
+        color: var(--ketabchi-brown-medium);
+        font-style: italic;
+    }
+
+.search-button {
+    background-color: var(--ketabchi-dark-red);
+    color: var(--ketabchi-light-text);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .search-button:hover {
+        background-color: var(--ketabchi-olive-green-darker);
+    }
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.pb-3 {
+    padding-bottom: 1.5rem;
+}
+
+
+a {
+    color: var(--ketabchi-olive-green);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    a:hover {
+        color: var(--ketabchi-olive-green-darker);
+        text-decoration: underline;
+    }

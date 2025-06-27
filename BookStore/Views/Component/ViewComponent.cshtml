@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Category>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css">
+
+</head>
+@foreach(var item in Model)
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="Group/@item.ID/@item.Name">@item.Name</a>
+    </li>
+}

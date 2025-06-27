@@ -1,0 +1,41 @@
+﻿:root {
+    --ketabchi-brown-dark: #6d4c41;
+    --ketabchi-brown-medium: #a1887f;
+    --ketabchi-olive-green: #6B8E23;
+    --ketabchi-olive-green-darker: #556b2f;
+    --ketabchi-dark-red: #B22222;
+    --ketabchi-cream: #FFF8DC;
+    --ketabchi-beige: #EFE5D0;
+    --ketabchi-light-text: #f8f9fa;
+    --ketabchi-dark-text: #333333;
+    --ketabchi-font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+.product-details {
+    direction: rtl;
+    font-family: var(--ketabchi-font-family);
+}
+
+.image-box {
+    background-color: var(--ketabchi-cream);
+    border: 2px solid var(--ketabchi-brown-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.info-box {
+    background-color: var(--ketabchi-cream);
+    border: 1px solid var(--ketabchi-brown-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-success {
+    background-color: var(--ketabchi-olive-green);
+    border: none;
+    font-weight: bold;
+}
+
+    .btn-success:hover {
+        background-color: var(--ketabchi-olive-green-darker);
+    }

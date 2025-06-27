@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "کتابچی";
+}
+<html lang="fa" dir="rtl">
+<link rel="stylesheet" href="/css/home.css">
+
+
+<div class="welcome-title">
+    <h1>کتابچی</h1>
+</div>
+
+<form class="search-container" asp-action="Search" asp-controller="Home" method="get">
+    <input class="search-input" type="text" name="query" placeholder="نام کتاب مورد نظر را وارد کنید" aria-label="Search" />
+    <button type="submit" class="search-button">جستجو</button>
+</form>
+
+
+<div class="row book-gallery text-center">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-3">
+            <div class="card">
+                <img src="~/Image/@(item.Id).jpg" class="card-image-top img-thumbnial" />
+                <div class="card-body">
+                    <h6 class="card-title">@item.Name</h6>
+                    <a asp-action="Detail"
+                       asp-controller="Home"
+                       asp-route-id="@item.Id">جزییات محصول</a>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
+    </div>
+</div>

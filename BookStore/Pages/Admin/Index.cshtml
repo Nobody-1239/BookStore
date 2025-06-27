@@ -1,0 +1,40 @@
+﻿@page
+@model BookStore.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "ادمین";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        <link href="~/css/admin.css" rel="stylesheet" / >
+    </style>
+</head>
+<body>
+    <h1>لیست کالاها</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>عکس</th>
+                <th>نام کالا</th>
+                <th>قیمت</th>
+                <th>حذف</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div class="product-list">
+                @foreach (var item in Model.products)
+                {
+                    <div class="product-card">
+                        <img src="~/Image/@(item.Id).jpg" alt="@item.Name" />
+                        <h2>@item.Name</h2>
+                        <p class="price">@item.item.Price.ToString("N0") تومان</p>
+                    </div>
+                }
+                <a asp-page="Create" class="btn btn-primary mb-3">افزودن محصول جدید</a>
+            </div>
+
+        </tbody>
+    </table>
+</body>
